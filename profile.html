@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+    <nav class="bg-white shadow-md w-full rounded-lg py-4 px-16 flex justify-between items-center flex-wrap">
+        <h1 class="text-3xl font-bold text-blue-600  mb-4">ToDo</h1>
+        <ul class="flex space-x-4 ">
+            <li><a href="index.html" class="nav-link text-blue-500 hover:text-blue-700">Home</a></li>
+            <li><a href="profile.html" class="nav-link active text-blue-500 hover:text-blue-700">Profile</a></li>
+            <!-- <li><a href="login.html" class="nav-link ">Login</a></li>
+            <li><a href="signup.html" class="nav-link ">SignUp</a></li> -->
+            <!-- <li><a href="Aboutus.html" class="nav-link whitespace-nowrap ">About Us</a></li> -->
+            <!-- <li><a href="start.html" class="nav-link whitespace-nowrap text-blue-500 hover:text-blue-700">Start Free</a></li> -->
+            <li><a href="start.html" class="btn">Start Free</a></li>
+
+        </ul>
+    </nav>
+<!-- main tag -->
+    <main class="  w-full flex flex-col justify-between items-left flex-wrap">
+        <h1 class=" bg-gray-200 w-full h-32 text-4xl text-black px-8 py-11 font-normal  ">Profile</h1>
+        <div>
+            <div class="px-14 py-10 flex items-center justify-between gap-4">
+                <div class="img w-32 font-medium">
+                    <img src="https://images.unsplash.com/photo-1666852327656-5e9fd213209b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="rounded-full w-32 h-32 object-cover object-center">
+                    <h4 class="text-center">Cherry Sins</h4>
+                </div>                
+                <div class="cont flex gap-6">
+                    <div class="flex flex-col justify-center items-center"><p class=" h-20 w-16 font-bold text-blue-700 bg-blue-100 text-xl text-center pt-6 border-2 border-solid border-blue-400 rounded"> 20+</p>To Start</div>
+                    <div class="flex flex-col justify-center items-center"><p class=" h-20 w-16 font-bold text-red-700 bg-red-100 border-2 text-xl border-solid border-red-400 text-center pt-6 rounded">10+</p>In Progress</div>
+                    <div class="flex flex-col justify-center items-center"><p class=" h-20 w-16 font-bold text-green-700 bg-green-100 border-2 text-xl border-solid border-green-500 text-center pt-6 rounded">40+</p>Completed</div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="border border-solid border-gray-900 h-px w-11/12 text-center"></div>
+              </div>
+              <!-- form -->
+              <div class="bg-white p-8 w-full max-w-md m-auto">
+                <form>
+                    <div class="w-full mb-4 flex justify-between items-center gap-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            <i class="fas fa-envelope"></i> Name
+                        </label>
+                        <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="enter full name">
+                    </div>
+                    <div class="w-full mb-4 flex justify-between items-center gap-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            <i class="fas fa-envelope"></i> Email
+                        </label>
+                        <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="abc@gmail.com">
+                    </div>
+                    <div class="mb-4 flex justify-between items-center gap-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                            <i class="fas fa-phone"></i> Phone
+                        </label>
+                        <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="+91 0123456789">
+                    </div>
+                    <div class="mb-4 flex justify-between items-center gap-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="birth">
+                            <i class="fas fa-birthday-cake"></i> Birth
+                        </label>
+                        <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="birth" type="date">
+                    </div>
+                    <div class="mb-4 flex justify-between items-center gap-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+                            <i class="fas fa-map-marker-alt"></i> Address
+                        </label>
+                        <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" type="text" placeholder="Address...">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="mt-4 md:text-center text-white bg-blue-700 hover:text-blue-500 hover:bg-transparent border border-blue-700 hover:border-gray-200 rounded ml-auto py-2 px-4 transition duration-300 shadow-lg hover:shadow-inner">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="flex flex-col items-center text-white bg-blue-900 p-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-2">ToDo</h2>
+            <p class="mb-4">Organize your tasks efficiently with ToDo</p>
+            <div class="flex justify-center space-x-4">
+       
+            </div>
+            <p class="mt-4">© 2024 ToDo. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

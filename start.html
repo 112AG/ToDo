@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-black h-full w-full relative">
+        <nav class="bg-white shadow-md w-full rounded-lg py-4 px-16 mb-6 flex justify-between items-center flex-wrap">
+            <h1 class="text-3xl font-bold text-blue-600 mb-4">ToDo</h1>
+            <ul class="flex space-x-4 ">
+                <li><a href="index.html" class="nav-link ">Home</a></li>
+                <li><a href="profile.html" class="nav-link ">Profile</a></li>
+                <li><a href="start.html" class="btn">Start Free</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="flex items-center space-x-4 justify-center">
+                <label for="task" class="text-lg font-medium">Add Your Today's Task:</label>
+                <input type="text" id="task" placeholder="as : WakeUp 5 am" class="border border-gray-300 rounded px-2 py-1">
+                <button class="bttn md:text-center whitespace-nowrap text-white bg-blue-700 hover:text-blue-500 hover:bg-transparent border border-blue-700 hover:border-gray-200 rounded py-1 px-4 transition duration-300 shadow-lg hover:shadow-inner">Add</button>
+            </div>
+            <div class="flex justify-center mt-16 mb-5">
+                <div class="border border-solid border-gray-900 h-px w-11/12 text-center "></div>
+            </div>
+            <div class="text-center mt-4 ">
+                <h2 class="text-4xl font-bold inline-block p-3 rounded">Your Added Tasks</h2>
+                <ul id="ul" class="mt-4  bg-gray-100 mx-7 border border-solid border-zinc-950 rounded mb-0.5 max-h-32 overflow-y-auto no-scrollbar list-disc list-inside"></ul>
+            </div>
+        </main>
+        <div class="flex flex-col items-center text-white bg-blue-900 p-4 mt-3 fixed bottom-0 w-full">
+            <div class="container mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-2">ToDo</h2>
+                <p class="mb-4">Organize your tasks efficiently with ToDo</p>
+                <div class="flex justify-center space-x-4">
+           
+                </div>
+                <p class="mt-4">© 2024 ToDo. All rights reserved.</p>
+            </div>
+        </div>
+
+    
+        <script>
+            let input = document.querySelector('input');
+            let button = document.querySelector('.bttn');
+            let ul = document.querySelector('#ul');
+        
+            function myfunction() {
+                let li = document.createElement('li');
+                li.innerHTML = input.value;
+                li.className = ' text-blue-600 flex justify-between items-center p-2 border-b border-gray-300';
+                ul.appendChild(li);
+        
+                let deleteButton = document.createElement('button');
+                deleteButton.innerHTML = 'delete';
+                deleteButton.className = 'ml-4 text-red-500 hover:text-red-700'; 
+                li.appendChild(deleteButton);
+        
+                input.value = '';
+        
+                deleteButton.addEventListener('click', function() {
+                    li.remove();
+                });
+            }
+        
+            button.addEventListener('click', myfunction);
+        
+            // Add event listener for the Enter key
+            input.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    myfunction();
+                }
+            });
+        </script>
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
